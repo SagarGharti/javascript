@@ -1,0 +1,48 @@
+<!-- <html>
+    <head>
+
+    </head>
+    <body>
+        <form name="myform" onclick="form_validated()" method="POST">
+        <label>Name</label>
+        <input type="text" name="fname">
+        <input type='submit' value='submit'>
+        </form>
+    <script>
+        function form_validated(){
+            var x= document.forms['myform']['fname'].value;
+            if(x == ""){
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h>Javascript can validate a number</h>
+        <label>Enter a number</label>
+        <input id="numb">
+        <button type="button" onclick="check()">click me</button>
+        <p id ="demo"></p>
+        <script>
+            function check(){
+                var x, text;
+                x= document.getElementById('numb').value;
+                if(isNaN(x) || x < 1 || x > 10){
+                    text ='input is not valid'
+                }else{
+                    text = 'ok input'
+                }
+                document.getElementById('demo').innerHTML= text
+            }
+        </script>   
+    </body>
+</html>
+
+
